@@ -1,0 +1,9 @@
+# Compiled output
+/tmp
+
+# Node
+/node_modules
+# IDEs and editors
+.idea/
+# Visual Studio Code
+.vscode/*
