@@ -51,7 +51,7 @@ MongoDBConnection.getConnection((error, connection) => {
             const result = await bot.sendMessage(1069494391, `Светлана, здравствуйте!
  Вам новое сообщение!
  От: ${name}
- Номер телефона: ${phone}
+ Номер телефона: +7${phone}
  Вопрос: ${question}`);
 
             res.status(200).json({msg: 'OK'});
