@@ -49,7 +49,7 @@ MongoDBConnection.getConnection((error, connection) => {
             const svetlanaId = 1082531680;
             const devId = 1069494391;
 
-            const result = await bot.sendMessage(svetlanaId, `Светлана, здравствуйте!
+            const result = await bot.sendMessage(devId, `Светлана, здравствуйте!
  Вам новое сообщение!
  От: ${name}
  Номер телефона: +7${phone}
@@ -61,9 +61,9 @@ MongoDBConnection.getConnection((error, connection) => {
         }
     });
 
-    app.get('*', function(req, res) {
-        res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-    });
+    // app.get('*', function(req, res) {
+    //     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+    // });
 
     app.use(function (req, res, next) {
         const err = new Error('Not Found');
