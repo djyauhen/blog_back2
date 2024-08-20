@@ -9,7 +9,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "serve:ssr:frontend_2": "node frontend/server/server.mjs"
+    "serve:ssr:frontend_2": "node frontend/server/server.mjs --host http://77.222.38.178 --port 8080"
   },
   "author": "Fursa Yauheni",
   "license": "ISC",

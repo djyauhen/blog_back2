@@ -54,9 +54,9 @@ MongoDBConnection.getConnection((error, connection) => {
             handleError(res, error);
         }
     });
-    app.get('*', function(req, res) {
-        res.sendFile(path.join(__dirname, 'frontend/browser', 'index.html'));
-    });
+    // app.get('*', function(req, res) {
+    //     res.sendFile(path.join(__dirname, 'frontend/browser', 'index.html'));
+    // });
     app.use(function (req, res, next) {
         const err = new Error('Not Found');
         err.status = 404;
