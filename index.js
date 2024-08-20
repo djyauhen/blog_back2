@@ -55,7 +55,7 @@ MongoDBConnection.getConnection((error, connection) => {
         }
     });
     app.get('*', function(req, res) {
-        res.sendFile(path.join(__dirname, 'frontend/server', 'index.server.html'));
+        res.sendFile(path.join(__dirname, 'frontend/browser', 'index.html'));
     });
     app.use(function (req, res, next) {
         const err = new Error('Not Found');
