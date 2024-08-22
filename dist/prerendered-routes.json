@@ -1,0 +1,9 @@
+{
+  "routes": [
+    "/",
+    "/admin",
+    "/admin/create",
+    "/blog",
+    "/politic"
+  ]
+}
