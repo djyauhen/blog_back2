@@ -17,6 +17,7 @@ MongoDBConnection.getConnection((error, connection) => {
     const app = express();
     app.use(express.json());
     app.use(express.static(path.join(__dirname, 'public')));
+    app.use(express.static(path.join(__dirname, 'browser')));
     app.use(cors());
     app.use("/api/articles", articleRoutes);
     app.get('/public/:image', (req, res) => {
@@ -53,9 +54,9 @@ MongoDBConnection.getConnection((error, connection) => {
             handleError(res, error);
         }
     });
-    // app.get('*', function(req, res) {
-    //     res.sendFile(path.join(__dirname, 'browser', 'index.html'));
-    // });
+    app.get('*', function(req, res) {
+        res.sendFile(path.join(__dirname, 'browser', 'index.html'));
+    });
     app.use(function (req, res, next) {
         const err = new Error('Not Found');
         err.status = 404;
