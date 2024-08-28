@@ -55,6 +55,12 @@ MongoDBConnection.getConnection((error, connection) => {
             handleError(res, error);
         }
     });
+    app.get('/sitemap.xml', function(req, res) {
+        res.sendFile(path.join(__dirname, 'browser', 'sitemap.xml'));
+    });
+    app.get('/robots.txt', function(req, res) {
+        res.sendFile(path.join(__dirname, 'browser', 'robots.txt'));
+    });
     app.get('*', function(req, res) {
         res.sendFile(path.join(__dirname, 'browser', 'index.html'));
     });
