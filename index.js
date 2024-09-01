@@ -44,7 +44,7 @@ MongoDBConnection.getConnection((error, connection) => {
             const svetlanaId = 1082531680;
             const devId = 1069494391;
 
-            const result = await bot.sendMessage(svetlanaId, `Светлана, здравствуйте!
+            const result = await bot.sendMessage(devId, `Светлана, здравствуйте!
  Вам новое сообщение!
  От: ${name}
  Номер телефона: +7${phone}
