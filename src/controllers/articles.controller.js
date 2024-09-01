@@ -49,6 +49,7 @@ class ArticleController {
 
             const data = {
                 title: req.body.title,
+                preface: req.body.preface,
                 text: req.body.text,
                 duration: Number(req.body.duration),
                 image: imageUrl
@@ -80,6 +81,7 @@ class ArticleController {
             if (req.file && !req.body.imageDelete) {
                 data = {
                     title: req.body.title,
+                    preface: req.body.preface,
                     text: req.body.text,
                     duration: Number(req.body.duration),
                     image: `${config.url}public/${req.file.filename}`
@@ -87,6 +89,7 @@ class ArticleController {
             } else if (!req.file && req.body.imageDelete && (req.body.imageDelete === 'true')) {
                 data = {
                     title: req.body.title,
+                    preface: req.body.preface,
                     text: req.body.text,
                     duration: Number(req.body.duration),
                     image: ''
@@ -94,6 +97,7 @@ class ArticleController {
             } else if (!req.file && (req.body.imageDelete !== 'true')) {
                 data = {
                     title: req.body.title,
+                    preface: req.body.preface,
                     text: req.body.text,
                     duration: Number(req.body.duration)
                 }

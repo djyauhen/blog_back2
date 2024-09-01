@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 //Создаем схему
 const articleSchema = new Schema({
     title: {type: String, required: true},
+    preface: {type: String, required: true},
     text: {type: String, required: true},
     image: {type: String, required: false},
     date: {type: String, required: true},
@@ -39,9 +40,10 @@ class ArticleModel {
     static async addNewArticle(data) {
         try {
             const date = new Date().toLocaleDateString('ru-RU');
-            const {title, text, duration, image} = data
+            const {title, preface, text, duration, image} = data
             const newArticle = new ArticleSchema({
                 title: title,
+                preface: preface,
                 text: text,
                 duration: duration,
                 image: image,
@@ -64,15 +66,16 @@ class ArticleModel {
         }
     }
 
-    //Изменеия статьи
+    //Изменение статьи
     static async updateArticleById(articleId, data) {
         try {
-            const {title, text, duration, image} = data
+            const {title, preface, text, duration, image} = data
             const article = await ArticleSchema.findOneAndUpdate({_id: articleId}, {
-                title,
-                text,
-                duration,
-                image
+                title: title,
+                preface: preface,
+                text: text,
+                duration: duration,
+                image: image,
             }, {new: true});
             return article ? article : "Статья не найдена";
         } catch (error) {
