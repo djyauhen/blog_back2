@@ -33,19 +33,4 @@
         <priority>0.5</priority>
     </url>
 
-    <!-- Контактные данные -->
-    <url>
-        <loc>mailto:advocate.degtyareva@gmail.com</loc>
-        <lastmod>2024-08-27T22:52:37+03:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>tel:+79781866808</loc>
-        <lastmod>2024-08-27T22:52:37+03:00</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-
 </urlset>
