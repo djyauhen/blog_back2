@@ -3,24 +3,24 @@
 
     <!-- Главная страница -->
     <url>
-        <loc>https://advokat-degtyareva.ru/</loc>
-        <lastmod>2024-08-27T22:52:37+03:00</lastmod>
+        <loc>https://true8lawyer.ru/</loc>
+        <lastmod>2024-12-23T22:52:37+03:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <!-- Страница со статьями (блог) -->
     <url>
-        <loc>https://advokat-degtyareva.ru/blog</loc>
-        <lastmod>2024-08-27T22:52:37+03:00</lastmod>
+        <loc>https://true8lawyer.ru/blog</loc>
+        <lastmod>2024-12-23T22:52:37+03:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Страница политики конфиденциальности -->
     <url>
-        <loc>https://advokat-degtyareva.ru/politic</loc>
-        <lastmod>2024-08-27T22:52:37+03:00</lastmod>
+        <loc>https://true8lawyer.ru/politic</loc>
+        <lastmod>2024-12-23T22:52:37+03:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -28,7 +28,7 @@
     <!-- Ссылка на Instagram -->
     <url>
         <loc>https://www.instagram.com/degtyareva_ru/</loc>
-        <lastmod>2024-08-27T22:52:37+03:00</lastmod>
+        <lastmod>2024-12-23T22:52:37+03:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
