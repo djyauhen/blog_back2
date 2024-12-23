@@ -17,14 +17,14 @@ MongoDBConnection.getConnection((error, connection) => {
     }
     const app = express();
     // Middleware для редиректа
-    app.use((req, res, next) => {
-        const host = req.headers.host;
-        if (host === 'advokat-degtyareva.ru' || host === 'www.advokat-degtyareva.ru') {
-            const newUrl = `https://true8lawyer.ru${req.url}`;
-            return res.redirect(301, newUrl); // Редирект на новый домен
-        }
-        next();
-    });
+    // app.use((req, res, next) => {
+    //     const host = req.headers.host;
+    //     if (host === 'advokat-degtyareva.ru' || host === 'www.advokat-degtyareva.ru') {
+    //         const newUrl = `https://true8lawyer.ru${req.url}`;
+    //         return res.redirect(301, newUrl); // Редирект на новый домен
+    //     }
+    //     next();
+    // });
     app.use(express.json());
     app.use(express.static(path.join(__dirname, 'public')));
     app.use(express.static(path.join(__dirname, 'browser')));
