@@ -9,6 +9,7 @@ const TelegramAPI = require('node-telegram-bot-api');
 const token = '7182522870:AAEe1W-UUYKonFPLk6EmG3vvLiwNxYuXY94';
 const bot = new TelegramAPI(token, {polling: true});
 const https = require('https');
+const http = require('http');
 
 MongoDBConnection.getConnection((error, connection) => {
     if (error || !connection) {
@@ -83,13 +84,13 @@ MongoDBConnection.getConnection((error, connection) => {
     });
 
     const options = {
-        key: fs.readFileSync('src/certificates/advokat-degtyareva.ru.key'),
-        cert: fs.readFileSync('src/certificates/advokat-degtyareva.ru.crt')
+        // key: fs.readFileSync('src/certificates/advokat-degtyareva.ru.key'),
+        // cert: fs.readFileSync('src/certificates/advokat-degtyareva.ru.crt')
     };
 
     const httpsServer = https.createServer(options, app);
 
-    httpsServer.listen(config.port, config.host, () =>
-        console.log(`Server started on https://${config.host}:${config.port}`)
+    httpsServer.listen(config.port, config.serverUrl, () =>
+        console.log(`Server started on https://${config.serverUrl}:${config.port}`)
         );
 })
