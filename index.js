@@ -17,6 +17,17 @@ MongoDBConnection.getConnection((error, connection) => {
         return;
     }
     const app = express();
+    // Middleware для редиректа
+    app.use((req, res, next) => {
+        const host = req.headers.host;
+
+        // Если текущий домен `advokat-degtyareva.ru` или его поддомены
+        if (host === 'advokat-degtyareva.ru' || host === 'www.advokat-degtyareva.ru') {
+            // Перенаправляем на новый домен `https://true8lawyer.ru`
+            return res.redirect(301, `https://true8lawyer.ru${req.url}`);
+        }
+        next();
+    });
     app.use(express.json());
     app.use(express.static(path.join(__dirname, 'public')));
     app.use(express.static(path.join(__dirname, 'browser')));
