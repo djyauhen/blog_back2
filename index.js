@@ -17,15 +17,6 @@ MongoDBConnection.getConnection((error, connection) => {
         return;
     }
     const app = express();
-    // Middleware для редиректа
-    // app.use((req, res, next) => {
-    //     const host = req.headers.host;
-    //     if (host === 'advokat-degtyareva.ru' || host === 'www.advokat-degtyareva.ru') {
-    //         const newUrl = `https://true8lawyer.ru${req.url}`;
-    //         return res.redirect(301, newUrl); // Редирект на новый домен
-    //     }
-    //     next();
-    // });
     app.use(express.json());
     app.use(express.static(path.join(__dirname, 'public')));
     app.use(express.static(path.join(__dirname, 'browser')));
@@ -88,9 +79,9 @@ MongoDBConnection.getConnection((error, connection) => {
         // cert: fs.readFileSync('src/certificates/advokat-degtyareva.ru.crt')
     };
 
-    const httpsServer = https.createServer(options, app);
+    const httpServer = http.createServer(options, app);
 
-    httpsServer.listen(config.port, config.serverUrl, () =>
+    httpServer.listen(config.port, () =>
         console.log(`Server started on https://${config.serverUrl}:${config.port}`)
         );
 })
