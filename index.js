@@ -81,7 +81,7 @@ MongoDBConnection.getConnection((error, connection) => {
 
     const httpsServer = https.createServer(options, app);
 
-    httpsServer.listen(config.port,config.url, () =>
+    httpsServer.listen(config.port,config.host, () =>
         console.log(`Server started on https://${config.serverUrl}:${config.port}`)
         );
 })
