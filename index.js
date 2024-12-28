@@ -75,13 +75,13 @@ MongoDBConnection.getConnection((error, connection) => {
     });
 
     const options = {
-        // key: fs.readFileSync('src/certificates/advokat-degtyareva.ru.key'),
-        // cert: fs.readFileSync('src/certificates/advokat-degtyareva.ru.crt')
+        key: fs.readFileSync('../../etc/letsencrypt/live/true8lawyer.ru/privkey.pem'),
+        cert: fs.readFileSync('../../etc/letsencrypt/live/true8lawyer.ru/fullchain.pem')
     };
 
-    const httpServer = http.createServer(options, app);
+    const httpsServer = https.createServer(options, app);
 
-    httpServer.listen(config.port, () =>
+    httpsServer.listen(config.port,config.url, () =>
         console.log(`Server started on https://${config.serverUrl}:${config.port}`)
         );
 })
