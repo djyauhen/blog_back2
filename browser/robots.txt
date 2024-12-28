@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /admin  # Блокировка доступа к ссылке /admin

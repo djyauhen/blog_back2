@@ -1,0 +1,36 @@
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+
+    <!-- Главная страница -->
+    <url>
+        <loc>https://true8lawyer.ru/</loc>
+        <lastmod>2024-12-28T22:52:37+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Страница со статьями (блог) -->
+    <url>
+        <loc>https://true8lawyer.ru/blog</loc>
+        <lastmod>2024-12-28T22:52:37+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Страница политики конфиденциальности -->
+    <url>
+        <loc>https://true8lawyer.ru/politic</loc>
+        <lastmod>2024-12-28T22:52:37+03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Ссылка на Instagram -->
+    <url>
+        <loc>https://www.instagram.com/degtyareva_ru/</loc>
+        <lastmod>2024-12-28T22:52:37+03:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>
