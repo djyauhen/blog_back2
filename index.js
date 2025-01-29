@@ -95,4 +95,16 @@ MongoDBConnection.getConnection((error, connection) => {
     httpsServer.listen(config.port,config.host, () =>
         console.log(`Server started on https://${config.serverUrl}:${config.port}`)
         );
+
+    // Создаем HTTP-сервер для редиректа на HTTPS
+    const httpServer = http.createServer((req, res) => {
+        // Перенаправляем все запросы на HTTPS
+        res.writeHead(301, { "Location": `https://${req.headers.host}${req.url}` });
+        res.end();
+    });
+
+    // Запускаем HTTP-сервер на порту 80
+    httpServer.listen(80, () => {
+        console.log('HTTP server is listening on port 80 and redirecting to HTTPS');
+    });
 })
